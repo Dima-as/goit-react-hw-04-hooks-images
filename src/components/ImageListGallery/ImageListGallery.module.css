@@ -1,0 +1,9 @@
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -5px;
+}
+/*# sourceMappingURL=ImageListGallery.module.css.map */
