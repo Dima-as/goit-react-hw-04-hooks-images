@@ -1,7 +1,8 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import s from "./Modal.module.scss";
 import PropTypes from "prop-types";
-
+const modalRoot = document.getElementById("modal-root");
 export default function Modal({ onClose, children }) {
   useEffect(() => {
     window.addEventListener("keydown", hendleKeyDown);
@@ -20,10 +21,11 @@ export default function Modal({ onClose, children }) {
       onClose();
     }
   };
-  return (
+  return createPortal(
     <div className={s.backdrop} onClick={hendleBackdropClick}>
       <div className={s.content}>{children}</div>
-    </div>
+    </div>,
+    modalRoot
   );
 }
 

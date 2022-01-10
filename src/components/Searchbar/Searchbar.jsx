@@ -45,7 +45,3 @@ export default function Searchbar({ onSubmit }) {
 Searchbar.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
-
-Searchbar.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
